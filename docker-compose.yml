@@ -1,0 +1,13 @@
+services:
+  simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - "7681:7681"
+    environment:
+      - PYTHONUNBUFFERED=1
+    tty: true
+    stdin_open: true
